@@ -85,7 +85,8 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   function handleLogout() {
-    dispatch(logout())
+    dispatch(logout());
+    alert('Logout successful');
   }
 
   return (
