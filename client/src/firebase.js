@@ -1,13 +1,14 @@
 import { initializeApp } from "firebase/app";
 import {getAuth, GoogleAuthProvider} from 'firebase/auth'
 
+console.log(process.env.apiKey);
 const firebaseConfig = {
-  apiKey: `${process.env.apiKey}`,
+  apiKey: process.env.apiKey,
   authDomain: "lummaotube.firebaseapp.com",
   projectId: "lummaotube",
   storageBucket: "lummaotube.appspot.com",
-  messagingSenderId: `${process.env.message}`,
-  appId: `${process.env.appId}`
+  messagingSenderId: process.env.message,
+  appId: process.env.appId
 };
 
 // Initialize Firebase
