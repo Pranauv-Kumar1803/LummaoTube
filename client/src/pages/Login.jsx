@@ -98,6 +98,7 @@ const Login = () => {
             // console.log(res.data);
             dispatch(loginSuccess(res.data));
             alert('login successful');
+            window.location.href='/';
         } catch (err) {
             alert(err.message);
             dispatch(loginError());
