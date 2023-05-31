@@ -37,7 +37,7 @@ app.use((err,req,res,next)=>{
 })
 
 mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.d8evjpw.mongodb.net/LummaoTube?retryWrites=true&w=majority`).then(()=>{
-    app.listen(5500,()=>{
-        console.log('connected to database and server running on port 5500');
+    app.listen(process.env.PORT || 5500,()=>{
+        console.log('connected to database and server running');
     })
 })
