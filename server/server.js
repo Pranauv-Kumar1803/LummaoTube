@@ -16,8 +16,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-const corsOptions = {origin: "https://lummaotube.onrender.com"}
-app.use(cors(corsOptions))
+const corsOptions = {origin: ["https://lummaotube.onrender.com"]}
+app.use(cors())
 
 // routes
 app.use('/api/auth',authRoutes);
