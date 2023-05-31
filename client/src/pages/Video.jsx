@@ -17,6 +17,7 @@ import axios from 'axios';
 import { dislike, fetchError, fetchStart, fetchSuccess, like } from '../redux/videoSlice';
 import { subscribe } from '../redux/userSlice';
 import { commentErase } from '../redux/commentSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
     display: flex;
@@ -126,6 +127,7 @@ const VideoFrame = styled.video`
 `
 
 const Video = () => {
+  const nav = useNavigate();
   const {currentUser} = useSelector(state => state.user);
   const {currentVideo} = useSelector(state=>state.video);
   const dispatch = useDispatch();
@@ -156,7 +158,7 @@ const Video = () => {
   const handleLike = async()=>{
     if(!currentUser) {
       alert('Login to Like/Dislike');
-      window.location.href = '/login';
+      nav('/login');
     }
     await axios.put(`/users/like/${currentVideo._id}`);
     dispatch(like(currentUser._id));
@@ -165,7 +167,7 @@ const Video = () => {
   const handleDisLike = async()=>{
     if(!currentUser) {
       alert('Login to Like/Dislike');
-      window.location.href = '/login';
+      nav('/login');
     }
     await axios.put(`/users/dislike/${currentVideo._id}`);
     dispatch(dislike(currentUser._id));
@@ -174,7 +176,7 @@ const Video = () => {
   const handleSubscribe = async()=>{
     if(!currentUser) {
       alert('Login to Like/Dislike');
-      window.location.href = '/login';
+      nav('/login');
     }
     if(currentUser.subscribedUsers?.includes(channel._id)) {
       await axios.put(`/users/unsub/${channel._id}`);
