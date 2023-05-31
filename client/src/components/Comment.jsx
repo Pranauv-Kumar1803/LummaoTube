@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../api/axiosConfig'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import {format} from 'timeago.js'

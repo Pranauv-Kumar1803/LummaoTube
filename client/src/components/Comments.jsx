@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Comment from './Comment'
 import { useDispatch, useSelector } from 'react-redux'
-import axios from 'axios'
+import axios from '../api/axiosConfig'
 import { commentError, commentStart, commentSuccess } from '../redux/commentSlice'
 const Container = styled.div`
 

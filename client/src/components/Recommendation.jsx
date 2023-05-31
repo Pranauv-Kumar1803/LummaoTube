@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Card from './Card';
-import axios from 'axios';
+import axios from '../api/axiosConfig';
 
 
 const Container = styled.div`

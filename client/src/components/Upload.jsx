@@ -7,7 +7,7 @@ import {
     getDownloadURL,
 } from "firebase/storage";
 import app from "../firebase";
-import axios from "axios";
+import axios from "../api/axiosConfig";
 import { useNavigate } from "react-router-dom";
 
 

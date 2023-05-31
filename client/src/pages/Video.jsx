@@ -13,7 +13,7 @@ import Recommendation from '../components/Recommendation';
 import {format} from 'timeago.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../api/axiosConfig';
 import { dislike, fetchError, fetchStart, fetchSuccess, like } from '../redux/videoSlice';
 import { subscribe } from '../redux/userSlice';
 import { commentErase } from '../redux/commentSlice';
