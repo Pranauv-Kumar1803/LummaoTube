@@ -147,7 +147,7 @@ const Login = () => {
                 <Input type='text' placeholder='username' name='name' value={data.name} onChange={handleChange2} />
                 <Input type='email' placeholder='email' name='email' value={data.email} onChange={handleChange2} />
                 <Input type='password' placeholder='password' name='password' value={data.password} onChange={handleChange2} />
-                <Button onClick={() => handleRegister}>Sign up</Button>
+                <Button onClick={handleRegister}>Sign up</Button>
             </Wrapper>
 
             <More>
