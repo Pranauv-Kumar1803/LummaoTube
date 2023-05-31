@@ -78,6 +78,7 @@ const Comments = ({ videoId }) => {
             dispatch(commentSuccess(newData));
             setComment('');
         } catch (err) {
+            console.log(err);
             dispatch(commentError());
         }
     }
