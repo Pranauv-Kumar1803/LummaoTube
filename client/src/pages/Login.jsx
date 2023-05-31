@@ -97,9 +97,11 @@ const Login = () => {
             const res = await axios.post('/auth/signin', login);
             // console.log(res.data);
             dispatch(loginSuccess(res.data));
+            alert('login successful');
         } catch (err) {
-            console.log(err.message);
+            alert(err.message);
             dispatch(loginError());
+            window.location.reload();
         }
     }
 
@@ -111,8 +113,11 @@ const Login = () => {
         try {
             const res = await axios.post('/auth/signup', data);
             console.log(res.data);
+            alert('sign up successful');
+            window.location.reload();
         } catch (err) {
-            console.log(err.message);
+            alert(err.message);
+            window.location.reload();
         }
     }
 
