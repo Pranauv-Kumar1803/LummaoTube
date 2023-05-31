@@ -8,6 +8,8 @@ import Video from "./pages/Video";
 import Home from './pages/Home'
 import Login from "./pages/Login";
 import Search from "./pages/Search";
+import axios from "axios";
+axios.defaults.baseURL="https://lummaotube-api.onrender.com"
 
 const Container = styled.div`
   padding: 0;
