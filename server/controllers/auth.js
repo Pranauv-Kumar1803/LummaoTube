@@ -79,7 +79,10 @@ export const googleAuth = async(req,res,next) =>{
             );
     
             res.cookie('access_token',token,{
-                httpOnly: true
+                httpOnly: true,
+                sameSite: "none",
+                secure: true,
+                maxAge: 24 * 60 * 60 * 1000
             }).status(200).json(user._doc);
         } else {
             const newUser = new User({
